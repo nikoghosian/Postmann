@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "58fe98b4-bbeb-4f6b-9a67-c352190fa42a",
+		"name": "Vahe Nikoghosyan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31733376"
+	},
+	"item": [
+		{
+			"name": "https://api.paste.ee/v1/pastes",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "u7gdtiDO3mOtqXINRFptw00HGuzlOjdYDWe61i9bx",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Auth-Token",
+							"type": "string"
+						},
+						{
+							"key": "id",
+							"value": "request/f64f7cb2-7d8b-4f3f-a0ba-d02190e4c902/b94cbac5-34bf-4a54-8ddd-04b4fa91d62e",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"encrypted\": false,\r\n    \"description\": \"test\",\r\n    \"sections\": [\r\n        {\r\n            \"name\": \"Section1\",\r\n            \"syntax\": \"autodetect\",\r\n            \"contents\": \"Testing!\"\r\n        }\r\n    ]\r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}v1/pastes/",
+					"host": [
+						"{{BaseUrl}}v1"
+					],
+					"path": [
+						"pastes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.paste.ee/v1/pastes Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "u7gdtiDO3mOtqXINRFptw00HGuzlOjdYDWe61i9bx",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Auth-Token",
+							"type": "string"
+						},
+						{
+							"key": "id",
+							"value": "request/f64f7cb2-7d8b-4f3f-a0ba-d02190e4c902/b94cbac5-34bf-4a54-8ddd-04b4fa91d62e",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}v1/pastes/{{ID}}",
+					"host": [
+						"{{BaseUrl}}v1"
+					],
+					"path": [
+						"pastes",
+						"{{ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.paste.ee/v1/pastes Copy 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "u7gdtiDO3mOtqXINRFptw00HGuzlOjdYDWe61i9bx",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Auth-Token",
+							"type": "string"
+						},
+						{
+							"key": "id",
+							"value": "request/f64f7cb2-7d8b-4f3f-a0ba-d02190e4c902/b94cbac5-34bf-4a54-8ddd-04b4fa91d62e",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}v1/pastes/FwmjR",
+					"host": [
+						"{{BaseUrl}}v1"
+					],
+					"path": [
+						"pastes",
+						"FwmjR"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"let responseJson = pm.response.json();",
+					"let pasteId = responseJson.id;",
+					"pm.environment.set('id', pasteId);"
+				]
+			}
+		}
+	]
+}

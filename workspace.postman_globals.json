@@ -1,0 +1,33 @@
+{
+	"id": "dd521a14-07c1-431e-89e3-1e45de5a55f7",
+	"values": [
+		{
+			"key": "timestamp",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "timeStamp",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "BaseUrl",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "ID",
+			"value": "id = \"id\"",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2023-12-14T18:02:39.945Z",
+	"_postman_exported_using": "Postman/10.21.2"
+}
